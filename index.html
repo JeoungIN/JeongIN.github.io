@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang=“en”>
+<head>
+    <meta charset=“UTF-8">
+    <title>Final</title>
+    <style>
+        .job-listings {
+          background-color: #fff;
+          display: flex;
+          max-width: 375px;
+          width: 100%;
+          flex-direction: column;
+          overflow: hidden;
+          margin: 0 auto;
+        }
+        
+        .header-image {
+          aspect-ratio: 8.55;
+          object-fit: contain;
+          width: 100%;
+        }
+        
+        .search-container {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          justify-content: center;
+          margin-top: 5px;
+        }
+        
+        .search-field {
+          display: flex;
+          min-width: 240px;
+          width: 294px;
+          align-items: center;
+        }
+        
+        .search-input {
+          border-radius: 10px;
+          background-color: #f2f2f2;
+          display: flex;
+          width: 100%;
+          align-items: center;
+          gap: 6px;
+          padding: 7px 8px;
+        }
+
+        .search-input input {
+            background-color: #f2f2f2;
+            border: none;
+        }
+        
+        .search-icon {
+          aspect-ratio: 1.07;
+          object-fit: contain;
+          width: 16px;
+        }
+        
+        .notification-icon {
+          aspect-ratio: 1.18;
+          object-fit: contain;
+          width: 20px;
+        }
+        
+        .job-list {
+          display: flex;
+          margin-top: 29px;
+          width: 100%;
+          max-width: 352px;
+          flex-direction: column;
+          color: #000;
+          letter-spacing: -0.41px;
+          font: 300 8px Inter, sans-serif;
+        }
+        
+        .job-card {
+          border-radius: 20px;
+          background-color: #fff;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          padding: 15px 10px;
+          margin-top: 22px;
+        }
+        
+        .job-card:first-child {
+          margin-top: 0;
+        }
+        
+        .job-content {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          gap: 14px;
+        }
+        
+        .job-image {
+          aspect-ratio: 1.05;
+          object-fit: contain;
+          width: 113px;
+          border-radius: 10px;
+        }
+        
+        .job-details {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          width: 162px;
+        }
+        
+        .job-title {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1;
+        }
+        
+        .job-description {
+          line-height: 13px;
+          margin-top: 8px;
+        }
+        
+        .tag-container {
+          position: relative;
+          display: flex;
+          margin-top: 8px;
+          align-items: flex-start;
+          gap: 6px;
+          line-height: 2;
+        }
+        
+        .tag {
+          border-radius: 5px;
+          background-color: #f0fafe;
+          width: 47px;
+          height: 16px;
+        }
+        
+        .tag-text {
+          position: absolute;
+          z-index: 0;
+          width: 21px;
+          height: 13px;
+        }
+        
+        .tag-text:nth-child(4) {
+          left: 12px;
+          bottom: 1px;
+        }
+        
+        .tag-text:nth-child(5) {
+          left: 66px;
+          top: 1px;
+        }
+        
+        .tag-text:nth-child(6) {
+          left: 119px;
+          top: 1px;
+        }
+        
+        .bookmark-icon {
+          aspect-ratio: 1.22;
+          object-fit: contain;
+          width: 22px;
+          margin-left: 20px;
+        }
+        
+        .footer {
+          background-color: #fff;
+          display: flex;
+          margin-top: 27px;
+          align-items: center;
+          overflow: hidden;
+          justify-content: space-between;
+          padding: 18px 57px;
+          border: 1px solid #d9d9d9;
+        }
+        
+        .footer-icons {
+          display: flex;
+          min-width: 240px;
+          align-items: center;
+          gap: 40px 101px;
+        }
+        
+        .footer-icon {
+          aspect-ratio: 0.94;
+          object-fit: contain;
+          width: 16px;
+        }
+        
+        .footer-icon:nth-child(2) {
+          aspect-ratio: 1.41;
+          width: 24px;
+        }
+        
+        .footer-icon:nth-child(3) {
+          aspect-ratio: 0.95;
+          width: 18px;
+        }
+        
+        .visually-hidden {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="job-listings">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5686db4695b8ce88079677cafe0128fe56a8c9b114a9b4fbca4f12c141c7fc0c?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="" class="header-image" />
+        <header class="search-container">
+          <form class="search-field" role="search">
+            <label for="job-search" class="visually-hidden">Search jobs</label>
+            <div class="search-input">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/901047c694e05a3c26340145dc56ecb01ffcd4984e32c6d0ca779c4d22cecffc?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="" class="search-icon" />
+              <input type="search" id="job-search" placeholder="Search jobs" aria-label="Search jobs" />
+            </div>
+          </form>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecc8ed2dbf870631ad0afa433472962911a5363b9030dda81263537e4b1af439?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Notifications" class="notification-icon" />
+        </header>
+        
+        <main class="job-list">
+          <article class="job-card">
+            <div class="job-content">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/49ab6459181bfb0d15d7b25ad7b3b76fd6c0a1fbe7ce52409bacf7d73757260c?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Old house guest house" class="job-image" />
+              <div class="job-details">
+                <h2 class="job-title">구옥 주택 게스트 하우스</h2>
+                <p class="job-description">
+                  안녕하세요<br />
+                  구옥 주택 게스트 하우스에서 새로운 남자 스탭을 모집합니다 🤗
+                </p>
+                <div class="tag-container">
+                  <span class="tag"></span>
+                  <span class="tag"></span>
+                  <span class="tag"></span>
+                  <span class="tag-text"># 남자</span>
+                  <span class="tag-text"># 애월</span>
+                  <span class="tag-text"># 구옥</span>
+                </div>
+              </div>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d5006e8f6226f55974a8f26bd4da5bd3592d85a846bde2f89be9c2db4cedb6fe?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Bookmark" class="bookmark-icon" />
+            </div>
+          </article>
+      
+          <article class="job-card">
+            <div class="job-content">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/49ab6459181bfb0d15d7b25ad7b3b76fd6c0a1fbe7ce52409bacf7d73757260c?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Old house guest house" class="job-image" />
+              <div class="job-details">
+                <h2 class="job-title">구옥 주택 게스트 하우스</h2>
+                <p class="job-description">
+                  안녕하세요<br />
+                  구옥 주택 게스트 하우스에서 새로운 남자 스탭을 모집합니다 🤗
+                </p>
+                <div class="tag-container">
+                  <span class="tag"></span>
+                  <span class="tag"></span>
+                  <span class="tag"></span>
+                  <span class="tag-text"># 남자</span>
+                  <span class="tag-text"># 애월</span>
+                  <span class="tag-text"># 구옥</span>
+                </div>
+              </div>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d5006e8f6226f55974a8f26bd4da5bd3592d85a846bde2f89be9c2db4cedb6fe?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Bookmark" class="bookmark-icon" />
+            </div>
+          </article>
+      
+          <article class="job-card">
+            <div class="job-content">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/49ab6459181bfb0d15d7b25ad7b3b76fd6c0a1fbe7ce52409bacf7d73757260c?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Old house guest house" class="job-image" />
+              <div class="job-details">
+                <h2 class="job-title">구옥 주택 게스트 하우스</h2>
+                <p class="job-description">
+                  안녕하세요<br />
+                  구옥 주택 게스트 하우스에서 새로운 남자 스탭을 모집합니다 🤗
+                </p>
+                <div class="tag-container">
+                  <span class="tag"></span>
+                  <span class="tag"></span>
+                  <span class="tag"></span>
+                  <span class="tag-text"># 남자</span>
+                  <span class="tag-text"># 애월</span>
+                  <span class="tag-text"># 구옥</span>
+                </div>
+              </div>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3ab6a8562454809169e11b41cf45db7c6f82eb6cc686c6d15a09c20635ae8304?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Bookmark" class="bookmark-icon" />
+            </div>
+          </article>
+      
+          <article class="job-card">
+            <div class="job-content">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/49ab6459181bfb0d15d7b25ad7b3b76fd6c0a1fbe7ce52409bacf7d73757260c?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Old house guest house" class="job-image" />
+              <div class="job-details">
+                <h2 class="job-title">구옥 주택 게스트 하우스</h2>
+                <p class="job-description">
+                  안녕하세요<br />
+                  구옥 주택 게스트 하우스에서 새로운 남자 스탭을 모집합니다 🤗
+                </p>
+                <div class="tag-container">
+                  <span class="tag"></span>
+                  <span class="tag"></span>
+                  <span class="tag"></span>
+                  <span class="tag-text"># 남자</span>
+                  <span class="tag-text"># 애월</span>
+                  <span class="tag-text"># 구옥</span>
+                </div>
+              </div>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3ab6a8562454809169e11b41cf45db7c6f82eb6cc686c6d15a09c20635ae8304?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Bookmark" class="bookmark-icon" />
+            </div>
+          </article>
+        </main>
+      
+        <footer class="footer">
+          <nav class="footer-icons">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7be981751a7575248558d1edde0271fbb18ce2b44572caf0f58f1e5c1b40d86a?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Home" class="footer-icon" />
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/bb82a3cd861f5bd93e212540b225e6aeffafea8941f678b7eee459ddb26c8317?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Messages" class="footer-icon" />
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fb99f68701474f30dcdf7ab6e2a9ba64ef8743c2fe4c655b49be9258dc876ec4?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Profile" class="footer-icon" />
+          </nav>
+        </footer>
+    </section>
+</body>
+</html>
