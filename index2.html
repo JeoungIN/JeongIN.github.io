@@ -1,0 +1,273 @@
+<style>
+  .online-application {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: Inter, sans-serif;
+    letter-spacing: -0.41px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  .header {
+    background-color: #91d0f6;
+    display: flex;
+    gap: 1px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .header-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .header-title {
+    flex-grow: 1;
+  }
+  
+  .section {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 7px;
+  }
+  
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+  
+  .info-label {
+    font-weight: 400;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: #f2f2f2;
+    margin: 18px 0;
+  }
+  
+  .resume-item {
+    border: 1px solid #878787;
+    border-radius: 5px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+  }
+  
+  .resume-radio {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #00b0ff;
+  }
+  
+  .resume-info {
+    flex-grow: 1;
+    margin-left: 31px;
+  }
+  
+  .resume-title {
+    font-size: 12px;
+  }
+  
+  .resume-date {
+    font-size: 8px;
+    color: #878787;
+  }
+  
+  .resume-icon {
+    width: 29px;
+    height: 29px;
+  }
+  
+  .date-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .date-button {
+    background-color: #91d0f6;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+  }
+  
+  .work-period {
+  display: flex;
+  flex-wrap: wrap; /* 화면 크기에 맞춰 줄바꿈 */
+  gap: 10px; /* 항목들 간 간격 조정 */
+  font-size: 12px;
+  font-weight: 300;
+  justify-content: space-between; /* 화면 크기에 맞게 항목들 간 균등 배분 */
+}
+  
+  .period-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .period-checkbox {
+    width: 13px;
+    height: 12px;
+    border: 1px solid #000;
+  }
+  
+  .period-checkbox.checked {
+    background-color: #00b0ff;
+  }
+  
+  .footer {
+    margin-top: 30px;
+    padding: 18px 57px;
+    border-top: 1px solid #d9d9d9;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-icon {
+    width: 260px;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .resume-radio.selected {
+    background-color: #00b0ff;
+    border-color: #00b0ff;
+  }
+
+  </style>
+  
+  <section class="online-application">
+    <header class="header">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/85629e9ec5a80eb9b84fed3594898154b9eca71c27677e137abc8aa11bef7985?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="" class="header-icon" />
+      <h1 class="header-title">온라인 지원</h1>
+    </header>
+  
+    <main>
+      <section class="section">
+        <h2 class="section-title">지원게스트하우스 확인</h2>
+        <div class="info-row">
+          <span class="info-label">게스트하우스명</span>
+          <span>구옥 주택 게스트 하우스</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">공고제목</span>
+          <span>활발한 여성 스탭 모집합니다~!</span>
+        </div>
+      </section>
+  
+      <div class="divider"></div>
+  
+      <section class="section">
+        <h2 class="section-title">지원정보 확인</h2>
+        <div class="info-row">
+          <span>이하영(여, 25세)</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">휴대폰</span>
+          <span>010-1234-0075</span>
+          <span>필수공개</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">인스타그램</span>
+          <span>abcdeds</span>
+          <span>공개</span>
+        </div>
+      </section>
+  
+      <div class="divider"></div>
+  
+      <section class="section">
+        <h2 class="section-title">이력서 선택</h2>
+        <div class="resume-item">
+          <div class="resume-radio selected" aria-hidden="true"></div> <!-- 선택된 상태 -->
+          <div class="resume-info">
+            <h3 class="resume-title">성실합니다</h3>
+            <p class="resume-date">최종수정일: 2024-07-17</p>
+          </div>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0ba9a7ba747af418af7cd28b2dfc68085919880fa39132a2824e2d1f41fedc0e?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="" class="resume-icon" />
+        </div>
+        <div class="resume-item">
+          <div class="resume-radio" aria-hidden="true"></div>
+          <div class="resume-info">
+            <h3 class="resume-title">열심히 하겠습니다</h3>
+            <p class="resume-date">최종수정일: 2023-01-03</p>
+          </div>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0ba9a7ba747af418af7cd28b2dfc68085919880fa39132a2824e2d1f41fedc0e?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="" class="resume-icon" />
+        </div>
+      </section>
+  
+      <div class="divider"></div>
+  
+      <section class="section">
+        <div class="date-selection">
+          <h2 class="section-title">근무 시작 가능 날짜</h2>
+          <button class="date-button">날짜 선택하기</button>
+        </div>
+  
+        <h2 class="section-title">근무 가능 기간</h2>
+        <div class="work-period">
+          <label class="period-option">
+            <input type="checkbox" class="visually-hidden" name="work-period" value="1week">
+            <span class="period-checkbox" aria-hidden="true"></span>
+            <span>1주</span>
+          </label>
+          <label class="period-option">
+            <input type="checkbox" class="visually-hidden" name="work-period" value="2weeks">
+            <span class="period-checkbox" aria-hidden="true"></span>
+            <span>2주</span>
+          </label>
+          <label class="period-option">
+            <input type="checkbox" class="visually-hidden" name="work-period" value="3weeks" checked>
+            <span class="period-checkbox checked" aria-hidden="true"></span>
+            <span>3주</span>
+          </label>
+          <label class="period-option">
+            <input type="checkbox" class="visually-hidden" name="work-period" value="1month">
+            <span class="period-checkbox" aria-hidden="true"></span>
+            <span>1달</span>
+          </label>
+          <label class="period-option">
+            <input type="checkbox" class="visually-hidden" name="work-period" value="2months+">
+            <span class="period-checkbox" aria-hidden="true"></span>
+            <span>2달이상</span>
+          </label>
+        </div>
+      </section>
+    </main>
+  
+    <footer class="footer">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f8f4ade26d4ec68c2ac931df64ea21a7f37fa5002adef5a5a51395b6c25b58e?placeholderIfAbsent=true&apiKey=c57012b8976a45fd861c8aed04a8e28e" alt="Footer logo" class="footer-icon" />
+    </footer>
+  </section>
